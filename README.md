@@ -23,8 +23,8 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
 1. Clonez ce dépôt :
    ```sh
-   git clone https://github.com/Mx-Bx/coin-afrique-scraper.git
-   cd coin-afrique-scraper
+   git clone https://github.com/Mx-Bx/dit-devops-project.git
+   cd dit-devops-project
    ```
 
 2. Construisez l'image Docker :
