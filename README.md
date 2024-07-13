@@ -63,20 +63,25 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
 ## Structure des fichiers
 
+```plaintext
 coin-afrique-scraper/
+|
 ├── app/             # Contient le code de l'application Streamlit
-│   └── data_app.py
+|   └── data_app.py
+|
 ├── tests/           # Contient les tests unitaires pour l'application
-│   └── test_app.py
+|   └── test_app.py
+|
 ├── Dockerfile       # Définit l'image Docker pour l'application
 ├── docker-compose.yml  # Définit les services Docker et leurs configurations
 ├── requirements.txt    # Liste des dépendances Python
 ├── README.md       # Fichier README principal du projet
+|
 └── data/
     ├── lien-1.csv
     ├── lien-2.csv
     ├── lien-3.csv
-
+```
 
 ## Commandes pour exécuter les tests
 
