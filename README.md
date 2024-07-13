@@ -4,7 +4,7 @@ Cette application Streamlit permet de télécharger des données extraites de Co
 
 ## Fonctionnalités
 
-- **Bibliothèques Python**: base64, pandas, streamlit
+- **Bibliothèques Python**: base64, pandas, streamlit (voir requirements.txt)
 - **Source de données**: [Coin Afrique](https://sn.coinafrique.com/)
 - **Options**:
   - Scraping des données avec BeautifulSoup
@@ -21,15 +21,22 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
 ## Installation
 
+### LOCAL
+
 1. Clonez ce dépôt :
    ```sh
    git clone https://github.com/Mx-Bx/dit-devops-project.git
    cd dit-devops-project
    ```
-
 2. Construisez l'image Docker :
    ```sh
-   docker-compose build
+   docker-compose build ou docker build -t <NomDeImage> .
+   ```
+   ou
+   
+   Recupérer l'image depuis dockerhub
+   ```sh
+   docker pull barryma22/dit-devops-project:latest
    ```
 
 3. Démarrez les services :
@@ -41,14 +48,27 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
    ```
    http://localhost:8501
    ```
+   
+### ONLINE
+
+- Accédez à l'application Streamlit dans votre navigateur à l'adresse suivante :
+   ```
+   https://dit-devops-project.streamlit.app/
+   ```
+   
+- Accédez à l'application Streamlit dans votre navigateur à l'adresse suivante (Render) :
+   ```
+   https://dit-devops-project.onrender.com
+   ```   
 
 ## Structure des fichiers
 
-```plaintext
 coin-afrique-scraper/
-├── app.py          # Contient le code de l'application Streamlit
-├── test_app.py     # Contient les tests unitaires pour l'application
-├── Dockerfile      # Définit l'image Docker pour l'application
+├── app/             # Contient le code de l'application Streamlit
+│   └── data_app.py
+├── tests/           # Contient les tests unitaires pour l'application
+│   └── test_app.py
+├── Dockerfile       # Définit l'image Docker pour l'application
 ├── docker-compose.yml  # Définit les services Docker et leurs configurations
 ├── requirements.txt    # Liste des dépendances Python
 ├── README.md       # Fichier README principal du projet
@@ -56,7 +76,7 @@ coin-afrique-scraper/
     ├── lien-1.csv
     ├── lien-2.csv
     ├── lien-3.csv
-```
+
 
 ## Commandes pour exécuter les tests
 
