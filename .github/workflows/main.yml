@@ -47,6 +47,6 @@ jobs:
     - name: Build and push to dockerhub
       uses: docker/build-push-action@v5
       with:
-       context:
-        push: true
+        context:
+        push: true 
         tags: barryma22/dit-devops-project:latest
