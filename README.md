@@ -64,7 +64,7 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 ## Structure des fichiers
 
 ```plaintext
-coin-afrique-scraper/
+dit-devops-project/
 |
 ├── app/             # Contient le code de l'application Streamlit
 |   └── data_app.py
@@ -108,7 +108,7 @@ pytest
 
 ## Aide
 
-Si vous rencontrez des problèmes, n'hésitez pas à ouvrir une issue sur [GitHub](https://github.com/Mx-Bx/coin-afrique-scraper/issues).
+Si vous rencontrez des problèmes, n'hésitez pas à ouvrir une issue sur [GitHub](https://github.com/Mx-Bx/dit-devops-project/issues).
 
 ## Licence
 
