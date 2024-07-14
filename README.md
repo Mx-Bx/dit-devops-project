@@ -1,4 +1,4 @@
-# Coin Afrique Scraper
+# DIT DEVOPS PROJECT : Coin Afrique Scraper
 
 Cette application Streamlit permet de télécharger des données extraites de Coin Afrique sur les "villas", "terrains" et "appartements".
 
