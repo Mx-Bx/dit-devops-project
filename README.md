@@ -112,5 +112,5 @@ Si vous rencontrez des problèmes, n'hésitez pas à ouvrir une issue sur [GitHu
 
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence MIT.
 ```
