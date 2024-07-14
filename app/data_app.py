@@ -5,13 +5,14 @@ from bs4 import BeautifulSoup as bs
 
 
 st.markdown("<h1 style='text-align: center;'>DIT DEVOPS PROJECT</h1>", unsafe_allow_html=True)
-st.markdown("""<p style='text-align: center;'>
-            <ul>
-                <li>Mouhamadou Adji BARRY</li>
-                <li>Amadou Tidiane DIALLO</li>
-                <li>Aminata CHERIF</li>
-            </u></p>", unsafe_allow_html=True
-""")
+st.markdown("<p style='text-align: center;'> \
+                <ul> \
+                    <li>Mouhamadou Adji BARRY</li> \
+                    <li>Amadou Tidiane DIALLO</li> \
+                    <li>Aminata CHERIF</li> \
+                </u> \
+            </p>", \
+unsafe_allow_html=True)
 
 st.markdown("""
 This app allows you to download scraped data on 'villas', 'terrains' and 'appartements' from coin afrique 
