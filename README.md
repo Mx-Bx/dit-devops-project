@@ -67,7 +67,10 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 dit-devops-project/
 |
 ├── app/             # Contient le code de l'application Streamlit
-|   └── data_app.py
+|   ├── data_app.py
+|   └── pages/
+|       ├── Form.py       
+|       └── Dashboard.py 
 |
 ├── tests/           # Contient les tests unitaires pour l'application
 |   └── test_app.py
