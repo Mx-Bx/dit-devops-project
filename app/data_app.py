@@ -4,15 +4,8 @@ from requests import get
 from bs4 import BeautifulSoup as bs
 
 
-st.markdown("<h1 style='text-align: center;'>DIT DEVOPS PROJECT</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'> \
-                <ul> \
-                    <li>Mouhamadou Adji BARRY</li> \
-                    <li>Amadou Tidiane DIALLO</li> \
-                    <li>Aminata CHERIF</li> \
-                </u> \
-            </p>", \
-unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center;'>DIT DEVOPS PROJECT : Coin Afrique Scraper</h1>", unsafe_allow_html=True)
 
 st.markdown("""
 This app allows you to download scraped data on 'villas', 'terrains' and 'appartements' from coin afrique 
@@ -159,34 +152,48 @@ def load_(dataframe, title, key) :
 st.markdown('''<style> .stButton>button {
     font-size: 12px;
     height: 3em;
-    width: 25em;
+    width: 20em;
 }</style>''', unsafe_allow_html=True)
 
 
-page = st.selectbox(
-    "Page Indexes",
-    options=[opt for opt in range(1, nbPage) ])
+col1, col2 = st.columns(2)
 
-option = st.selectbox(
-    "Options",
-    ("Scrape data using beautifulSoup", "Download scraped data", "Dashboard of the data", "Fill the form"))
+with col2:
+   st.header("Page Indexes")
+   page = st.selectbox(
+       "For scraping only",
+       options=[opt for opt in range(1, nbPage)])
 
+with col1:
+   st.header("Choices")
+   option = st.selectbox(
+       "Options",
+       ("Scrape data using beautifulSoup", "Load scraped data"))
 
 if option == "Scrape data using beautifulSoup":
-    load_bs(int(page), 'Villas', '1')
-    load_bs(int(page), 'Terrains', '2')
-    load_bs(int(page), 'Appartements', '3')
 
-if option == "Download scraped data":
+    tab1, tab2, tab3 = st.tabs(["Villas", "Terrains", "Appartements"])
+
+    with tab1:
+       load_bs(int(page), 'Villas load', '1')
+
+    with tab2:
+       load_bs(int(page), 'Terrains load', '2')
+
+    with tab3:
+       load_bs(int(page), 'Appartements load', '3')
+
+if option == "Load scraped data":
     # Charger les données
-    load_(pd.read_csv('data/lien-1.csv'), 'Villas', '1')
-    load_(pd.read_csv('data/lien-2.csv'), 'Terrains', '2')
-    load_(pd.read_csv('data/lien-3.csv'), 'Appartements', '3')
+    tab1, tab2, tab3 = st.tabs(["Villas", "Terrains", "Appartements"])
+    with tab1:
+        load_(pd.read_csv('data/lien-1.csv'), 'Villas', '1')
+
+    with tab2:
+        load_(pd.read_csv('data/lien-3.csv'), 'Appartements', '3')
+
+    with tab3:
+        load_(pd.read_csv('data/lien-2.csv'), 'Terrains', '2')
 
 
-if option == "Fill the form":
-    st.markdown("<iframe src=https://ee.kobotoolbox.org/i/CvCjdZwE width='800' height='600'></iframe>", unsafe_allow_html=True)
 
-if option == "Dashboard of the data":
-    st.markdown("<iframe width='800' height='600' src='https://lookerstudio.google.com/embed/reporting/64013115-e577-4ece-a3bd-d9552b7223b8/page/p_4uo6mtorhd' frameborder='0' "
-                "style='border:0' allowfullscreen sandbox='allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox'></iframe>", unsafe_allow_html=True)
